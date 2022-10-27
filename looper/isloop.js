@@ -2,7 +2,16 @@
 
 //Complete this algo
 const isLoop = (linkedlist) => {
-
+  let smiley = linkedlist.getNthNode(0);
+  let diamond = linkedlist.getNthNode(0);
+  while(diamond.next){
+    smiley = smiley.next;
+    diamond = diamond.next.next;
+    if(diamond === smiley){
+      return true;
+    }
+  }
+  return false;
 };
 
 
